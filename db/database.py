@@ -57,6 +57,7 @@ def init_db() -> None:
             role          TEXT NOT NULL,
             date_applied  TEXT NOT NULL,
             status        TEXT NOT NULL DEFAULT 'Applied',
+            work_form     TEXT NOT NULL DEFAULT 'Onsite',
             source        TEXT,
             location      TEXT,
             salary_range  TEXT,

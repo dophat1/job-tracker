@@ -30,6 +30,7 @@ def add_application(
     role: str,
     date_applied: date,
     status: str = "Applied",
+    work_form: str = "Onsite",
     source: str | None = None,
     location: str | None = None,
     salary_range: str | None = None,
@@ -40,15 +41,16 @@ def add_application(
     cur = conn.execute(
         """
         INSERT INTO applications
-            (company, role, date_applied, status, source, location,
+            (company, role, date_applied, status, work_form, source, location,
              salary_range, last_update, notes)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             company,
             role,
             str(date_applied),
             status,
+            work_form,
             source,
             location,
             salary_range,
