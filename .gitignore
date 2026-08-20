@@ -2,3 +2,5 @@
 
 
 data/applications.db
+
+db/__pycache__
