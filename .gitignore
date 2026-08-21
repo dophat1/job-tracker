@@ -4,3 +4,5 @@
 data/applications.db
 
 db/__pycache__
+
+experiment.py
